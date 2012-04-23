@@ -31,6 +31,10 @@ class View_pdfCommand(sublime_plugin.WindowCommand):
 			# Under "Set inverse search command-line", set:
 			# sublime_text "%f":%l
 			viewercmd = ["SumatraPDF", "-reuse-instance"]		
+		elif s == "Linux":
+			# for inverse search: Settings|Configure Okular|Editor ...
+			# Under "Command" set: sublime_text" "%f":%l
+			viewercmd = ["okular", "--unique"]		
 		else:
 			sublime.error_message("Platform as yet unsupported. Sorry!")
 			return	
