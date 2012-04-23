@@ -1,0 +1,15 @@
+{
+        "scope": "text.tex.latex",
+
+        "completions":
+        [
+
+                // TikZ
+                { "trigger": "tikzpicture", "contents": "\\begin{tikzpicture}[${1:options}]\n\t$2 \n\\end{tikzpicture}" },
+                { "trigger": "tikzstyle",   "contents": "\\tikzstyle{${1:mystyle}} = [$2];" },
+                { "trigger": "draw", "contents": "\\draw[${1:options}] (${2:position}) $3" },
+                { "trigger": "path", "contents": "\\path[${1:options}] (${2:position}) $3" },
+                { "trigger": "node", "contents": "\\node[${1:options},name=${2:n1}] at (${3:position}) { $0 };" }
+        ]
+
+}
